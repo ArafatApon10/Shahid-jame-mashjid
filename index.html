@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শহীদ জামে মসজিদ - শহীদ জামে মসজিদ</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Bengali -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Noto Sans Bengali to all elements */
+        body {
+            font-family: 'Noto Sans Bengali', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        /* Custom colors: Deep Green and Gold */
+        .masjid-bg { background-color: #047857; } /* Deep Emerald Green */
+        .masjid-text-light { color: #facc15; } /* Amber Gold */
+        .masjid-text-dark { color: #065f46; } /* Darker Green */
+        .masjid-border { border-color: #facc15; }
+        .hover-scale { transition: transform 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.02); }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="masjid-bg shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-3xl font-extrabold text-white">
+                        শহীদ জামে মসজিদ
+                    </a>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#prayer-times" class="text-white hover:masjid-text-light px-3 py-2 rounded-md text-lg font-medium transition duration-150">নামাজের সময়সূচি</a>
+                    <a href="#about" class="text-white hover:masjid-text-light px-3 py-2 rounded-md text-lg font-medium transition duration-150">আমাদের কথা</a>
+                    <a href="#events" class="text-white hover:masjid-text-light px-3 py-2 rounded-md text-lg font-medium transition duration-150">ঘোষণাবলী</a>
+                    <a href="#contact" class="text-white hover:masjid-text-light px-3 py-2 rounded-md text-lg font-medium transition duration-150">যোগাযোগ</a>
+                </nav>
+                <!-- Donate Button -->
+                <a href="#donate" class="hidden md:block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-2 px-4 rounded-full shadow-md transition duration-300">
+                    অনুদান দিন
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-gray-900">
+            <div class="absolute inset-0">
+                <!-- Placeholder Image (Masjid Dome/Minaret) -->
+                <img class="w-full h-full object-cover opacity-30" src="https://placehold.co/1200x600/065f46/ffffff?text=Masjid+Image" alt="শহীদ জামে মসজিদ-এর ছবি" onerror="this.onerror=null;this.src='https://placehold.co/1200x600/065f46/ffffff?text=মসজিদের+ছবি';">
+            </div>
+            <div class="relative max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 flex items-center justify-center min-h-[50vh]">
+                <div class="text-center bg-white/80 p-6 rounded-xl shadow-2xl backdrop-blur-sm">
+                    <h1 class="text-4xl sm:text-6xl font-extrabold masjid-text-dark leading-tight mb-4">
+                        শহীদ জামে মসজিদে স্বাগতম
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
+                        আসুন, আল্লাহর ইবাদত করি এবং আমাদের সমাজকে আলোকিত করি। আমাদের দরজা সকলের জন্য উন্মুক্ত।
+                    </p>
+                    <div class="mt-8 flex justify-center space-x-4">
+                         <a href="#prayer-times" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg shadow-xl text-lg transition duration-300 hover-scale">
+                            নামাজের সময় দেখুন
+                        </a>
+                        <a href="#contact" class="bg-white hover:bg-gray-100 text-gray-900 font-bold py-3 px-8 rounded-lg shadow-xl border border-gray-300 text-lg transition duration-300 hover-scale">
+                            যোগাযোগ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prayer Times Section (Most Important) -->
+        <section id="prayer-times" class="py-16 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-4">দৈনিক নামাজের সময়সূচি</h2>
+                <p id="today-date" class="text-xl text-gray-600 mb-12">
+                    আজকের তারিখ: <span class="font-bold text-green-700">মঙ্গলবার, ১২ রবিউস সানি ১৪৪৬ হিজরি</span>
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-6 gap-6 max-w-4xl mx-auto">
+                    <!-- Prayer Card Template -->
+                    <div class="prayer-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-yellow-400 hover-scale">
+                        <p class="text-2xl font-bold masjid-text-dark">ফজর</p>
+                        <p class="text-4xl font-extrabold mt-2 text-gray-900">৫:০০</p>
+                        <p class="text-sm text-gray-500">শুরুর সময়</p>
+                    </div>
+                    <div class="prayer-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-yellow-400 hover-scale">
+                        <p class="text-2xl font-bold masjid-text-dark">সূর্যোদয়</p>
+                        <p class="text-4xl font-extrabold mt-2 text-gray-900">৬:২০</p>
+                        <p class="text-sm text-gray-500">ইশরাকের শুরু</p>
+                    </div>
+                    <div class="prayer-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-yellow-400 hover-scale">
+                        <p class="text-2xl font-bold masjid-text-dark">যোহর</p>
+                        <p class="text-4xl font-extrabold mt-2 text-gray-900">১২:১০</p>
+                        <p class="text-sm text-gray-500">আজান ও ইকামত</p>
+                    </div>
+                    <div class="prayer-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-yellow-400 hover-scale">
+                        <p class="text-2xl font-bold masjid-text-dark">আসর</p>
+                        <p class="text-4xl font-extrabold mt-2 text-gray-900">৩:৫০</p>
+                        <p class="text-sm text-gray-500">আজান ও ইকামত</p>
+                    </div>
+                    <div class="prayer-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-yellow-400 hover-scale">
+                        <p class="text-2xl font-bold masjid-text-dark">মাগরিব</p>
+                        <p class="text-4xl font-extrabold mt-2 text-gray-900">৫:৩০</p>
+                        <p class="text-sm text-gray-500">সূর্যাস্তের পরপর</p>
+                    </div>
+                    <div class="prayer-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-yellow-400 hover-scale">
+                        <p class="text-2xl font-bold masjid-text-dark">এশা</p>
+                        <p class="text-4xl font-extrabold mt-2 text-gray-900">৭:০০</p>
+                        <p class="text-sm text-gray-500">আজান ও ইকামত</p>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <h3 class="text-3xl font-extrabold masjid-text-dark mb-4">জুম্মা নামাজের সময়</h3>
+                    <div class="bg-white p-6 rounded-xl shadow-lg inline-block border-l-8 border-green-700">
+                        <p class="text-2xl font-bold text-gray-900">খুতবার শুরু:</p>
+                        <p class="text-4xl font-extrabold text-red-600 mt-1">১:০০ PM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 masjid-bg text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-extrabold masjid-text-light mb-8">আমাদের লক্ষ্য ও উদ্দেশ্য</h2>
+                <div class="grid md:grid-cols-2 gap-8 text-left">
+                    <div class="p-6 bg-white/10 rounded-xl shadow-xl hover-scale">
+                        <h3 class="text-2xl font-bold mb-3 masjid-text-light">আধ্যাত্মিক কেন্দ্র</h3>
+                        <p class="text-gray-200">
+                            শহীদ জামে মসজিদ শুধুমাত্র নামাজের স্থান নয়, এটি একটি আধ্যাত্মিক দুর্গ। আমরা মানুষকে আল্লাহর নৈকট্য লাভ করতে, সঠিক দ্বীনি জ্ঞান অর্জন করতে এবং কুরআনের আলোয় নিজেদের জীবন পরিচালিত করতে উৎসাহিত করি।
+                        </p>
+                    </div>
+                    <div class="p-6 bg-white/10 rounded-xl shadow-xl hover-scale">
+                        <h3 class="text-2xl font-bold mb-3 masjid-text-light">সামাজিক সেবা</h3>
+                        <p class="text-gray-200">
+                            মসজিদ হচ্ছে সমাজের কেন্দ্রবিন্দু। আমরা নিয়মিতভাবে গরীব ও দুস্থদের জন্য খাদ্য বিতরণ, চিকিৎসা সহায়তা, এবং শিক্ষামূলক কর্মসূচির আয়োজন করি। আমাদের লক্ষ্য হচ্ছে সেবা ও সহানুভূতির মাধ্যমে মানবজাতির কল্যাণ নিশ্চিত করা।
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-10">
+                    <a href="#" class="inline-block bg-white hover:bg-gray-100 text-gray-900 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300">
+                        মসজিদের ইতিহাস জানুন
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Announcements/Events Section -->
+        <section id="events" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">আসন্ন ঘোষণাবলী ও অনুষ্ঠানমালা</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Event Card 1 -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-l-4 border-red-500 hover-scale">
+                        <p class="text-sm font-semibold text-red-500 mb-2">জরুরী ঘোষণা</p>
+                        <h3 class="text-xl font-bold masjid-text-dark mb-3">ঈদে মিলাদুন্নবী (সাঃ) মাহফিল</h3>
+                        <p class="text-gray-600 mb-4">আগামী শুক্রবার (২০ নভেম্বর), বাদ মাগরিব। সকল ধর্মপ্রাণ ভাই-বোনদের উপস্থিত থাকার জন্য বিশেষভাবে অনুরোধ করা হচ্ছে।</p>
+                        <span class="text-sm text-gray-500">সময়: ২০ নভেম্বর, সন্ধ্যা ৬:০০টা</span>
+                    </div>
+                    <!-- Event Card 2 -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-l-4 border-green-700 hover-scale">
+                        <p class="text-sm font-semibold text-green-700 mb-2">মাসিক শিক্ষা</p>
+                        <h3 class="text-xl font-bold masjid-text-dark mb-3">কুরআন শিক্ষার নতুন ব্যাচ</h3>
+                        <p class="text-gray-600 mb-4">প্রাপ্তবয়স্কদের জন্য তাজবীদ ও মাখরাজ সহ কুরআন শিক্ষার নতুন ব্যাচ শুরু হচ্ছে। দ্রুত নাম নথিভুক্ত করুন।</p>
+                        <span class="text-sm text-gray-500">শুরু: ১ ডিসেম্বর, শনিবার</span>
+                    </div>
+                    <!-- Event Card 3 -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-l-4 border-blue-500 hover-scale">
+                        <p class="text-sm font-semibold text-blue-500 mb-2">সমাজ সেবা</p>
+                        <h3 class="text-xl font-bold masjid-text-dark mb-3">শীতবস্ত্র বিতরণ কর্মসূচি</h3>
+                        <p class="text-gray-600 mb-4">আসন্ন শীতে দুস্থদের মাঝে কম্বল ও গরম কাপড় বিতরণের জন্য আপনাদের অনুদান আহ্বান করা হচ্ছে।</p>
+                        <span class="text-sm text-gray-500">অনুদান জমা দেওয়ার শেষ তারিখ: ২৫ নভেম্বর</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donation Section (Simple CTA) -->
+        <section id="donate" class="py-16 masjid-bg text-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-extrabold masjid-text-light mb-4">মসজিদের সেবায় আপনার অনুদান</h2>
+                <p class="text-xl text-gray-200 mb-8">
+                    আপনার যাকাত ও সাদকা মসজিদ নির্মাণ, রক্ষণাবেক্ষণ ও সামাজিক কর্মকাণ্ডে ব্যবহৃত হয়। আল্লাহ আপনার দান কবুল করুন।
+                </p>
+                <a href="#" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-10 rounded-full text-xl shadow-2xl transition duration-300 hover-scale">
+                    অনলাইনে অনুদান দিন
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-12">যোগাযোগ ও অবস্থান</h2>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- Contact Info -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-3xl font-bold masjid-text-dark mb-6">আমাদের সাথে যোগাযোগ করুন</h3>
+                        <div class="space-y-4">
+                            <p class="text-lg">
+                                <span class="font-bold masjid-text-dark">ঠিকানা:</span> শহীদ রোড, নতুন বাজার এলাকা, ঢাকা-১২৩০, বাংলাদেশ।
+                            </p>
+                            <p class="text-lg">
+                                <span class="font-bold masjid-text-dark">ফোন:</span> +৮৮০ ১xxxx xxxxxx (মসজিদ অফিস)
+                            </p>
+                            <p class="text-lg">
+                                <span class="font-bold masjid-text-dark">ইমেল:</span> shahidjamemashjid@example.com
+                            </p>
+                            <p class="text-lg">
+                                <span class="font-bold masjid-text-dark">জুম্মার ইমাম:</span> মাওলানা মোঃ হাফিজুল ইসলাম
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Map Placeholder -->
+                    <div class="bg-gray-200 rounded-xl shadow-lg overflow-hidden min-h-64 md:min-h-full">
+                        <!-- Placeholder for a Google Map embed -->
+                        <div class="w-full h-full flex items-center justify-center text-center text-gray-700 p-4">
+                            <p class="text-xl">
+                                🌐 মসজিদের অবস্থান (Google Map এখানে এমবেড করা যেতে পারে)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="masjid-bg py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-white text-lg font-bold">শহীদ জামে মসজিদ</p>
+            <p class="text-gray-300 mt-2 text-sm">© ২০২৫ সর্বস্বত্ব সংরক্ষিত। আল্লাহর সন্তুষ্টির জন্য নির্মিত।</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-white hover:masjid-text-light transition duration-150">ফেসবুক</a>
+                <a href="#" class="text-white hover:masjid-text-light transition duration-150">ইউটিউব</a>
+                <a href="#" class="text-white hover:masjid-text-light transition duration-150">প্রাইভেসী নীতি</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript to dynamically set the current date in Bengali
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateElement = document.getElementById('today-date');
+            if (dateElement) {
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                const today = new Date().toLocaleDateString('bn-BD', options);
+                
+                // Note: The Hijri date is static for demonstration purposes, 
+                // as accurate dynamic conversion requires a complex library.
+                dateElement.innerHTML = `আজকের তারিখ: <span class="font-bold text-green-700">${today}</span>`;
+            }
+        });
+    </script>
+</body>
+</html>
+    
+</body>
+</html>
